@@ -20,6 +20,7 @@ public class BoidInstatiator : MonoBehaviour
         Vector3 basePos = gameObject.transform.position;
         for (; currentInstanceCount < targetInstanceCount; currentInstanceCount++)
         {
+            boid.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
             float spawnX = Random.Range(basePos.x - spawnWidth / 2, basePos.x + spawnWidth / 2);
             float spawnY = Random.Range(basePos.y - spawnHeight / 2, basePos.y + spawnHeight / 2);
             Instantiate(boid, new Vector3(spawnX, spawnY, 0), Quaternion.identity);
@@ -31,6 +32,7 @@ public class BoidInstatiator : MonoBehaviour
     {
         if (currentInstanceCount < targetInstanceCount)
         {
+            boid.GetComponent<SpriteRenderer>().color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
             Vector3 basePos = gameObject.transform.position;
             float spawnX = Random.Range(basePos.x - spawnWidth / 2, basePos.x + spawnWidth / 2);
             float spawnY = Random.Range(basePos.y - spawnHeight / 2, basePos.y + spawnHeight / 2);
